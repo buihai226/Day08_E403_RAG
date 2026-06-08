@@ -1,17 +1,92 @@
 [
   {
-    "question": "Hình phạt cho tội tàng trữ trái phép chất ma tuý theo Điều 249 Bộ luật Hình sự?",
-    "expected_answer": "Phạt tù từ 1 đến 5 năm đối với trường hợp tàng trữ từ 1g đến dưới 5g heroin hoặc cocaine, hoặc chất ma tuý khác với khối lượng tương đương.",
-    "expected_context": "Bộ luật Hình sự 2015, Điều 249"
+    "question": "Theo Luật Phòng, chống ma túy, chất ma túy được định nghĩa là gì?",
+    "expected_answer": "Chất ma túy là chất gây nghiện, chất hướng thần được quy định trong danh mục chất ma túy do Chính phủ ban hành.",
+    "expected_context": "Luật Phòng, chống ma túy, Điều 2 (Giải thích từ ngữ), khoản 1"
   },
   {
-    "question": "Luật Phòng chống ma tuý 2021 quy định những hình thức cai nghiện nào?",
-    "expected_answer": "Cai nghiện tự nguyện tại gia đình, cai nghiện tự nguyện tại cộng đồng, cai nghiện tự nguyện tại cơ sở cai nghiện, và cai nghiện bắt buộc tại cơ sở cai nghiện.",
-    "expected_context": "Luật Phòng chống ma tuý 2021, Chương V"
+    "question": "Chất gây nghiện được hiểu như thế nào theo luật?",
+    "expected_answer": "Chất gây nghiện là chất kích thích hoặc ức chế thần kinh, dễ gây tình trạng nghiện đối với người sử dụng.",
+    "expected_context": "Luật Phòng, chống ma túy, Điều 2, khoản 2"
   },
   {
-    "question": "Danh mục các chất ma tuý thuộc nhóm I theo quy định pháp luật Việt Nam gồm những chất nào?",
-    "expected_answer": "Nhóm I gồm các chất ma tuý tuyệt đối cấm sử dụng trong y học và đời sống, bao gồm heroin, cocaine, methamphetamine, MDMA (ecstasy), cannabis (cần sa), và các chất tương tự.",
-    "expected_context": "Nghị định 57/2022/NĐ-CP, Phụ lục I"
+    "question": "Chất hướng thần là gì?",
+    "expected_answer": "Chất hướng thần là chất kích thích hoặc ức chế thần kinh hoặc gây ảo giác, nếu sử dụng nhiều lần có thể dẫn tới tình trạng nghiện đối với người sử dụng.",
+    "expected_context": "Luật Phòng, chống ma túy, Điều 2, khoản 3"
+  },
+  {
+    "question": "Tiền chất là gì theo quy định của pháp luật?",
+    "expected_answer": "Tiền chất là hóa chất thường được sử dụng trong quá trình điều chế, sản xuất chất ma túy, được quy định trong danh mục tiền chất do Chính phủ ban hành.",
+    "expected_context": "Luật Phòng, chống ma túy, Điều 2, khoản 4"
+  },
+  {
+    "question": "Cây có chứa chất ma túy gồm những loại cây nào?",
+    "expected_answer": "Cây có chứa chất ma túy là cây thuốc phiện, cây côca, cây cần sa và các loại cây khác có chứa chất ma túy do Chính phủ quy định.",
+    "expected_context": "Luật Phòng, chống ma túy, Điều 2, khoản 5"
+  },
+  {
+    "question": "Có những hình thức cai nghiện ma túy nào?",
+    "expected_answer": "Có hai hình thức: cai nghiện ma túy tự nguyện (tại gia đình, cộng đồng; tại cơ sở cai nghiện công lập hoặc trường giáo dưỡng; tại cơ sở cai nghiện tư nhân) và cai nghiện ma túy bắt buộc (tại cơ sở cai nghiện công lập cho người từ đủ 18 tuổi, hoặc tại trường giáo dưỡng/cơ sở công lập cho người từ đủ 12 đến dưới 18 tuổi).",
+    "expected_context": "Luật Phòng, chống ma túy, Điều 30 (Hình thức cai nghiện ma túy)"
+  },
+  {
+    "question": "Thời hạn cai nghiện ma túy lần đầu là bao lâu?",
+    "expected_answer": "Thời hạn cai nghiện ma túy đối với người cai nghiện lần đầu là 24 tháng, từ lần thứ hai trở lên là 36 tháng.",
+    "expected_context": "Luật Phòng, chống ma túy, Điều 29 (Thời hạn, quy trình cai nghiện ma túy)"
+  },
+  {
+    "question": "Cơ sở cai nghiện ma túy công lập thực hiện cai nghiện cho độ tuổi nào?",
+    "expected_answer": "Cơ sở cai nghiện ma túy công lập thực hiện cai nghiện cho người từ đủ 18 tuổi trở lên; trường giáo dưỡng và cơ sở công lập đủ điều kiện thực hiện cho người từ đủ 12 đến dưới 18 tuổi.",
+    "expected_context": "Luật Phòng, chống ma túy, Điều 28 (Cơ sở cai nghiện ma túy)"
+  },
+  {
+    "question": "Nghị định về danh mục chất ma túy chia thành mấy danh mục?",
+    "expected_answer": "Có 4 danh mục: Danh mục I (các chất ma túy tuyệt đối cấm sử dụng trong y học và đời sống xã hội), Danh mục II (được sử dụng hạn chế), Danh mục III (được sử dụng trong y tế, thú y), và Danh mục IV (các tiền chất).",
+    "expected_context": "Nghị định quy định các danh mục chất ma túy và tiền chất, Điều 1"
+  },
+  {
+    "question": "Danh mục I các chất ma túy là nhóm chất như thế nào?",
+    "expected_answer": "Danh mục I gồm các chất ma túy tuyệt đối cấm sử dụng trong y học và đời sống xã hội; chỉ được dùng trong nghiên cứu, kiểm nghiệm, giám định, vì mục đích quốc phòng, an ninh theo quy định đặc biệt của cơ quan có thẩm quyền.",
+    "expected_context": "Nghị định danh mục chất ma túy và tiền chất, Điều 1, Danh mục I"
+  },
+  {
+    "question": "Bộ nào quản lý nhà nước về tiền chất sử dụng trong lĩnh vực công nghiệp?",
+    "expected_answer": "Bộ Công Thương có trách nhiệm quản lý nhà nước về các tiền chất sử dụng trong lĩnh vực công nghiệp.",
+    "expected_context": "Nghị định danh mục chất ma túy và tiền chất, Điều 2 (Trách nhiệm quản lý)"
+  },
+  {
+    "question": "Các tội phạm về ma túy trong Bộ luật Hình sự gồm những điều nào?",
+    "expected_answer": "Gồm Điều 248 (tội sản xuất trái phép chất ma túy), Điều 249 (tội tàng trữ trái phép chất ma túy), Điều 250 (tội vận chuyển trái phép chất ma túy), Điều 251 (tội mua bán trái phép chất ma túy) và Điều 252 (tội chiếm đoạt chất ma túy).",
+    "expected_context": "Bộ luật Hình sự 2015, Chương XX, Điều 248-252"
+  },
+  {
+    "question": "Hình phạt cao nhất có thể áp dụng cho tội phạm về ma túy là gì?",
+    "expected_answer": "Hình phạt cao nhất là tử hình, áp dụng đối với người phạm tội đặc biệt nghiêm trọng, trong đó có các tội phạm về ma túy.",
+    "expected_context": "Bộ luật Hình sự 2015, Điều 40 (Tử hình)"
+  },
+  {
+    "question": "Hình phạt tử hình có được áp dụng đối với phụ nữ có thai không?",
+    "expected_answer": "Không. Không áp dụng hình phạt tử hình đối với người dưới 18 tuổi khi phạm tội, phụ nữ có thai, phụ nữ đang nuôi con dưới 36 tháng tuổi, hoặc người đủ 75 tuổi trở lên.",
+    "expected_context": "Bộ luật Hình sự 2015, Điều 40, khoản 2"
+  },
+  {
+    "question": "Thế nào là tội phạm rất nghiêm trọng theo Bộ luật Hình sự?",
+    "expected_answer": "Tội phạm rất nghiêm trọng là tội phạm có mức cao nhất của khung hình phạt từ trên 07 năm đến 15 năm tù.",
+    "expected_context": "Bộ luật Hình sự 2015, Điều 9 (Phân loại tội phạm)"
+  },
+  {
+    "question": "Diễn viên Hữu Tín bị tuyên mức án bao nhiêu vì liên quan ma túy?",
+    "expected_answer": "Diễn viên Hữu Tín (Trần Hữu Tín) bị tuyên phạt 7 năm 6 tháng tù về tội tổ chức sử dụng trái phép chất ma túy.",
+    "expected_context": "Bài báo kenh14.vn về diễn viên Hữu Tín lĩnh án"
+  },
+  {
+    "question": "Ca sĩ Chi Dân tên thật là gì?",
+    "expected_answer": "Ca sĩ Chi Dân tên thật là Nguyễn Trung Hiếu, sinh năm 1989.",
+    "expected_context": "Bài báo kenh14.vn về kết luận điều tra vụ ca sĩ Chi Dân"
+  },
+  {
+    "question": "Vụ ca sĩ Miu Lê liên quan ma túy xảy ra ở đâu?",
+    "expected_answer": "Vụ việc xảy ra tại khu vực bãi tắm Tùng Thu, đặc khu Cát Hải, TP Hải Phòng; ca sĩ Miu Lê tên thật là Lê Ánh Nhật, nằm trong nhóm 6 người dương tính với ma túy.",
+    "expected_context": "Bài báo kenh14.vn về vụ Miu Lê tổ chức, sử dụng ma túy ở đảo Cát Bà"
   }
 ]

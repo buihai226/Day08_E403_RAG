@@ -171,19 +171,66 @@ run_dashboard()
 ## Kiến Trúc Hệ Thống
 
 ```
-[Vẽ diagram kiến trúc ở đây]
+                        ┌─────────────────────────┐
+                        │   Người dùng (Streamlit) │
+                        │        app.py            │
+                        └────────────┬─────────────┘
+                                     │ câu hỏi
+                                     ▼
+   ┌──────────────────────── RETRIEVAL PIPELINE (Task 9) ─────────────────────────┐
+   │                                                                              │
+   │   ┌────────────────────┐        ┌────────────────────┐                       │
+   │   │ Semantic Search     │        │ Lexical Search      │                      │
+   │   │ (Task 5, ChromaDB)  │        │ (Task 6, BM25)      │                      │
+   │   └─────────┬──────────┘        └─────────┬──────────┘                       │
+   │             └────────────┬─────────────────┘                                 │
+   │                          ▼                                                    │
+   │                 ┌──────────────────┐      ┌─────────────────────┐            │
+   │                 │ Merge — RRF       │ ───▶ │ Rerank (Task 7)      │           │
+   │                 │ (Task 7)          │      │ RRF / MMR / X-encoder│           │
+   │                 └──────────────────┘      └─────────┬───────────┘            │
+   │                                                      │  score < ngưỡng?       │
+   │                                                      ▼                        │
+   │                                          ┌────────────────────────┐          │
+   │                                          │ Fallback: PageIndex     │          │
+   │                                          │ Vectorless (Task 8)     │          │
+   │                                          └────────────────────────┘          │
+   └──────────────────────────────────┬───────────────────────────────────────────┘
+                                       │ top-k chunks
+                                       ▼
+                        ┌─────────────────────────────┐
+                        │ Generation (Task 10)         │
+                        │ reorder (lost-in-the-middle) │
+                        │ → prompt → LLM → citation     │
+                        └────────────┬────────────────┘
+                                     ▼
+                        ┌─────────────────────────────┐
+                        │ Câu trả lời + nguồn (UI)     │
+                        └─────────────────────────────┘
+
+   Dữ liệu: data/landing → data/standardized (Task 3) → ChromaDB + chunks.json (Task 4)
+   Đánh giá: group_project/evaluation/eval_pipeline.py (DeepEval, 4 metrics, A/B)
 ```
+
+**Luồng dữ liệu (offline / index):**
+`Task 1` thu thập luật (PDF/DOCX/TXT) + `Task 2` crawl báo (JSON) → `Task 3` convert Markdown →
+`Task 4` chunk + embed (MiniLM) → ChromaDB (`data/chromadb/`) + `chunks.json` (cho BM25).
+
+**Luồng truy vấn (online):** xem diagram phía trên — hybrid retrieval → rerank → fallback →
+generation có citation, demo trực quan từng bước trong `app.py`.
 
 ---
 
 ## Phân Công Công Việc
 
+> Dự án thực hiện cá nhân (một người làm toàn bộ pipeline + chatbot + evaluation).
+
 | Thành viên | MSSV | Nhiệm vụ | Trạng thái |
 |-----------|------|----------|------------|
-| | | | |
-| | | | |
-| | | | |
-| | | | |
+| (điền tên) | (điền MSSV) | Task 1–4: thu thập, chuẩn hóa, chunking & indexing | ✅ Done |
+| (điền tên) | (điền MSSV) | Task 5–7: semantic / lexical search + reranking | ✅ Done |
+| (điền tên) | (điền MSSV) | Task 8–10: PageIndex, retrieval pipeline, generation | ✅ Done |
+| (điền tên) | (điền MSSV) | Chatbot UI (`app.py`) + Evaluation pipeline (DeepEval) | ✅ Done |
 
 ---
 
