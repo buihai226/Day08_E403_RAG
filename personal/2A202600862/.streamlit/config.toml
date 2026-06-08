@@ -1,0 +1,7 @@
+[server]
+# Tắt cơ chế auto-reload duyệt module (tránh traceback torchvision do
+# transformers lazy-import module xử lý ảnh không liên quan tới dự án).
+fileWatcherType = "none"
+
+[logger]
+level = "error"
